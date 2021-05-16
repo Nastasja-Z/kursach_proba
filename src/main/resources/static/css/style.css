@@ -1,0 +1,39 @@
+        body {
+            font-family: Century Gothic;
+        }
+
+        header {
+            grid-area: header;
+            background-color: white;
+
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: white;
+
+        }
+        main {
+            grid-area: main;
+            display: block;
+            margin: auto;
+            width: 90%;
+        }
+        footer {
+            grid-area: footer;
+
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-areas: "header header" "nav main" "footer footer";
+        }
+        a {
+            font-family: Century Gothic;
+        }
+div.logo {
+    width:200px;
+    float:left;
+    font-size: 30px;
+    color: lime;
+}
