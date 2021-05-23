@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
-<html lang="en">
 <head th:include="~{otherTags}"/>
-
 <body class="container">
 <header th:include="~{header}"/>
 <nav th:include="~{menuNav}"/>
-<main>
-    <div class="content">
-        MAIN
-    </div>
-</main>
+<main th:include="~{needyDetailsForm}"/>
 <footer th:include="~{footer}"/>
 
 
-<script src="/js/script.js"></script>
 </body>
 </html>

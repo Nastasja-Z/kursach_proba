@@ -1,28 +1,33 @@
-        body {
+body {
             font-family: Century Gothic;
         }
 
         header {
             grid-area: header;
-            background-color: white;
+            background-color: #e6ffcc !important;
+            height:50px;
+            position:sticky;
+            top:0px;
+            font-size:20px;
+            padding:20px;
 
         }
 
-        nav {
-            grid-area: nav;
-            background-color: white;
 
-        }
         main {
             grid-area: main;
-            display: block;
-            margin: auto;
-            width: 90%;
-        }
-        footer {
-            grid-area: footer;
+            background-color: #ffffcc;
+            padding: 30px;
 
         }
+        div.content {
+            display: block;
+            margin auto;
+            padding:20px;
+            background-color: #ffffcc;
+
+        }
+
         .container {
             display: grid;
             grid-template-columns: 1fr 4fr;
@@ -30,10 +35,34 @@
         }
         a {
             font-family: Century Gothic;
+            text-decoration:none;
+            color: black;
         }
-div.logo {
-    width:200px;
-    float:left;
-    font-size: 30px;
-    color: lime;
-}
+ div.logo a:hover {
+            color:white;
+
+        }
+        div.logo:hover {
+            border: 3px white solid;
+            background-color: black;
+
+        }
+        div.logo {
+            width:100px;
+            float:left;
+            font-size: 15px;
+            border: 3px solid;
+            text-align:center;
+            background-color: white;
+
+        }
+
+
+         footer {
+                    grid-area: footer;
+                    color:#999966;
+                    font-size: 10px;
+                    background-color: #ffff99;
+                   padding: 30px;
+
+                }

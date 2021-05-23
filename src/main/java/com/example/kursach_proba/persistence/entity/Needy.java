@@ -35,11 +35,6 @@ public class Needy {
     public void setOption(Option option) {
         this.option = option;
     }
-//    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//    @JoinTable(name = "needy_option",
-//        joinColumns = {@JoinColumn(name = "needy_id")},
-//        inverseJoinColumns = {@JoinColumn(name = "option_id")})
-//    private List<Option> options =new ArrayList<>();
 
     public Integer getNeedyId() {
         return needyId;
@@ -96,11 +91,5 @@ public class Needy {
     public int hashCode() {
         return Objects.hash(needyId);
     }
-//    public List<Option> getOptions() {
-//        return options;
-//    }
-//
-//    public void setOptions(List<Option> options) {
-//        this.options = options;
-//    }
+
 }

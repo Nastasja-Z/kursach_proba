@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Корзина</title>
-</head>
-<body>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="~{otherTags}"/>
+
+<body class="container">
+<header th:include="~{header}"/>
+<nav th:include="~{menuNav}"/>
+<main id="basketContent" th:include="~{basketForm}"/>
+<footer th:include="~{footer}"/>
+
 
 </body>
 </html>
+

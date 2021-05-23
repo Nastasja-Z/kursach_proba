@@ -4,7 +4,6 @@ package com.example.kursach_proba.service;
 import com.example.kursach_proba.cache.config.BasketCacheConfig;
 import com.example.kursach_proba.cache.data.BasketData;
 import com.example.kursach_proba.persistence.entity.Needy;
-import com.example.kursach_proba.persistence.entity.Option;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,10 +23,14 @@ public class BasketService {
     @Autowired
     private BasketCacheConfig basketCacheConfig;
 
+    @Autowired
+    private  NeedyService needyService;
+
     public void addToBasket(String sessionId, Needy option) {
         try {
+            Needy needy=needyService.findNeedyById(option.getNeedyId());
             BasketData data = basketCacheConfig.getCache().get(sessionId);
-            data.addOption(option);
+            data.addOption(needy);
         } catch (ExecutionException e) {
             logger.error("ERROR during adding option", +option.getOptionId(), e);
         }

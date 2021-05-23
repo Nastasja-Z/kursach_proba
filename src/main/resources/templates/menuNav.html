@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style type="text/css">
+     nav {
+            grid-area: nav;
+            background-color: #f2ffcc;
+
+        }
+        ul#menuNav {
+         margin: 0 auto;
+          padding: 1em 0;
+          list-style-type: none;
+        }
+
+        #menuNav a {
+          padding: 17px;
+          background:#ccffcc;
+          border-right: 5px solid olive;
+          color: olive;
+          display: block;
+        }
+        #menuNav a:hover {
+            background: olive;
+            color: #ccffcc;
+            border-right: 5px solid #ccffcc;
+
+        }
+        #menuNav li {
+          display: block;
+          /*margin: 5px; */
+          margin-bottom: 5px;
+          height: 50px;
+        }
+</style>
+
+<nav th:fragment="menuNav">
+    <ul id="menuNav">
+        <li><a th:href="@{/home}">Home page</a>
+        </li>
+        <li><a th:href="@{/needies}">Оказать помощь</a></li>
+        <li><a th:href="@{/basket/open}">Корзина <span id="itemCount"
+                                                       th:value="${basketItemsAmount}"></span></a></li>
+        <li><a th:href="@{/aboutus}">О нас</a></li>
+
+    </ul>
+</nav>

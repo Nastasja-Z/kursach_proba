@@ -77,4 +77,8 @@ public class NeedyService {
         }
     }
 
+    /*private Needy f(Needy n) {
+        n.getOption().getNameOfOption()
+    }*/
+
 }

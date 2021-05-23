@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style type="text/css">
+img {
+display:block;
+width: 250px;
+margin:auto;
+
+}
+ main {
+            grid-area: main;
+            background-color: #ffffcc;
+            padding: 30px;
+        }
+
+        .btn {
+            padding: 10px;
+            border: 3px solid orange;
+            background-color: orange;
+        }
+        .btn:hover {
+            border: 3px solid black;
+
+        }
+        div.overDiv {
+        padding: 40px;
+        }
+        div.overDiv:hover {
+        box-shadow: 3px 3px red, -1em 0 .4em olive;
+        }
+        div.op{
+        padding: 40px;
+        }
+</style>
+
+<main th:fragment="needyTemplate">
+<br><br><br>
+        <div class="op">
+                <label >Options:</label>
+                <select id="optionFilter" onchange="filterNeedies('CATALOGUE')" class="selectpicker product-filter-item">
+                        <option th:value="null" th:text="none"></option>
+                        <option th:each="option: ${options}" th:value="${option.optionId}">
+                                <span th:text="${option.nameOfOption}"></span>
+                        </option>
+                </select>
+                </div>
+
+<div >
+    <div   id="needyGrid">
+    <div th:each="needy: ${needies}" class="overDiv">
+                    <div >
+                        <img  th:src="${needy.photoPath}">
+                    </div>
+            <div>
+                <span>MY NAME IS: </span>
+                <h4 th:text="${needy.nameNeedy}"/>
+                <!--name of option needed-->
+                <span>AND I NEED: </span>
+                <h4 th:text="${needy.getOption().getNameOfOption()}"></h4>
+            </div><br><br>
+                    <p><a class="btn btn-primary" th:href="'/getNeedyDetails/' + ${needy.needyId}">It will be great if you can help me</a></p>
+
+        </div>
+    </div>
+</div>
+</main>
