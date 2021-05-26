@@ -73,7 +73,7 @@ public class BasketController {
     @RequestMapping(value = "saveOrder", method = RequestMethod.GET)
     public String saveOrder() {
         //autorize?
-        User user = userService.save(new User());
+        User user = userService.findByUsername("testuser");
         donationListService.saveListFromBasket(basketService.getBasketData(getSessionId()), user);
         basketService.invalidateCache();
         return "redirect:/orders/open";

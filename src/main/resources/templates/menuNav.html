@@ -31,6 +31,9 @@
           margin-bottom: 5px;
           height: 50px;
         }
+        li#myLists {
+        display:none;
+        }
 </style>
 
 <nav th:fragment="menuNav">
@@ -41,6 +44,8 @@
         <li><a th:href="@{/basket/open}">Корзина <span id="itemCount"
                                                        th:value="${basketItemsAmount}"></span></a></li>
         <li><a th:href="@{/aboutus}">О нас</a></li>
+        <li id="myLists"> <a th:href="@{/orders/open}"  >My Orders</a>
+        </li>
 
     </ul>
 </nav>

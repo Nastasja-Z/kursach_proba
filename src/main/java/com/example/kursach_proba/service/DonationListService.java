@@ -30,6 +30,7 @@ public class DonationListService {
     public void saveListFromBasket(BasketData basketData, User user) {
         DonationList donationList = basketDataTranslator.userBasketDataToOrder(basketData, user);
         DonationList savedList = donationListRepository.save(donationList);
+        //??????????????
         donationItemService.saveDonationItems(savedList.getDonationItems());
 
     }

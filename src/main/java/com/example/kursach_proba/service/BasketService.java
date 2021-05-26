@@ -24,11 +24,11 @@ public class BasketService {
     private BasketCacheConfig basketCacheConfig;
 
     @Autowired
-    private  NeedyService needyService;
+    private NeedyService needyService;
 
     public void addToBasket(String sessionId, Needy option) {
         try {
-            Needy needy=needyService.findNeedyById(option.getNeedyId());
+            Needy needy = needyService.findNeedyById(option.getNeedyId());
             BasketData data = basketCacheConfig.getCache().get(sessionId);
             data.addOption(needy);
         } catch (ExecutionException e) {

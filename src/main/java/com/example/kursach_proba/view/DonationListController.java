@@ -22,7 +22,7 @@ public class DonationListController {
     @GetMapping("/orders/open")
     public String openOrders(Model model) {
         //trouble??
-        User user = userService.save(new User());
+        User user = userService.findByUsername("testuser");
         model.addAttribute("userOrders", donationListService.findListsByUser(user));
         return "userOrders";
     }

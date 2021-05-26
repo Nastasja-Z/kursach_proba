@@ -86,6 +86,7 @@ function buildEmptyResultCard() {
 }
 
 function changeNeediesAmount(needyId, currNeedyRow) {
+
     var neediesAmount = currNeedyRow.value;
     $.ajax({
         type: "POST",
@@ -198,3 +199,20 @@ function fillErrorMessage(field) {
         field.children[0].classList.add("error-border");
     }
 }
+
+//function setClass() {
+//
+//    document.getElementById("myLists").disabled=false;
+//}
+//function getUser(userId) {
+//debugger;
+//    var donation_user = $("#saveUser").value;
+//    $.ajax({
+//        type: "POST",
+//        url: "/basket/getUser",
+//        dataType: 'json',
+//        data: {
+//            "donation_user": donation_user
+//        }
+//    });
+//}

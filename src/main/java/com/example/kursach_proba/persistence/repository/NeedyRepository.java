@@ -7,11 +7,6 @@ import org.springframework.data.repository.query.Param;
 
 public interface NeedyRepository extends JpaRepository<Needy, Integer> {
 
-//    @Query("FROM Needy n ORDER BY n.id, n.nameNeedy")
-//    Iterable<Needy> findAllOrderByTree();
-//
-//    //вопросики
-//    Iterable<Needy> findAllByStatusOrderByNameNeedy();
 
     Iterable<Needy> findAllByOrderByNameNeedy();
 
