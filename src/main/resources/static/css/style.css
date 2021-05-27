@@ -3,20 +3,19 @@ body {
         }
 
         header {
-            grid-area: header;
-            background-color: #e6ffcc !important;
-            height:50px;
-            position:sticky;
-            top:0px;
-            font-size:20px;
-            padding:20px;
+                    grid-area: header;
+                    background-color: #e100ff;
+                    height:50px;
+                    font-size:20px;
+                    padding:20px;
+                    color:orange;
 
-        }
 
+                }
 
         main {
             grid-area: main;
-            background-color: #ffffcc;
+            background-color: white;
             padding: 30px;
 
         }
@@ -24,7 +23,7 @@ body {
             display: block;
             margin auto;
             padding:20px;
-            background-color: #ffffcc;
+            background-color: white;
 
         }
 

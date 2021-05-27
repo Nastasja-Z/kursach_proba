@@ -76,7 +76,7 @@ public class BasketController {
         User user = userService.findByUsername("testuser");
         donationListService.saveListFromBasket(basketService.getBasketData(getSessionId()), user);
         basketService.invalidateCache();
-        return "redirect:/orders/open";
+        return "redirect:/needies";
     }
 
 }

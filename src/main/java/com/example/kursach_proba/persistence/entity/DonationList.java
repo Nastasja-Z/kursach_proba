@@ -25,8 +25,6 @@ public class DonationList {
     @Column(name = "created_date", nullable = false, columnDefinition = "date default sysdate")
     private Date createdDate = new Date();
 
-
-    //Option -> Needy ????????????
     @Transient
     private Map<Needy, Long> groupedOptions;
 

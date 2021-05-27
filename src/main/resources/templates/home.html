@@ -3,14 +3,126 @@
 
 <html lang="en">
 <head th:include="~{otherTags}"/>
+<style>
+ main {
+            grid-area: main;
+            background-color: white;
+            padding: 30px;
+        }
+    a.new {
+      background: -webkit-linear-gradient(blue, red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    a.new:hover {
+      background: -webkit-linear-gradient(red, blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    div.menschen {
+    width:40%;
+    display:block;
+    margin:auto;
+    border:1px solid grey;
+    box-shadow: 3px 3px 3px 3px grey;
+    text-align:center;
+    background-color:#fce3e3;
+    }
+    img.mensch {
+    border: 5px white solid;
+    border-radius: 50%;
+    display:block;
+    margin:auto;
+    width: 100px;
 
+    }
+    .innertext {
+        margin:10px;
+
+    }
+    button.gluck {
+    display:block;
+    margin:auto;
+    width:300px;
+    padding:50px;
+    background-color:purple;
+    color:white;
+    height:70px;
+
+    }
+    button.gluck:hover{
+    background-color:white;
+    color:purple;
+    }
+    div.content {
+        background-color:white;
+    }
+header{
+        background-color:#e;
+
+}
+</style>
 <body class="container">
 <header th:include="~{header}"/>
 <nav th:include="~{menuNav}"/>
 
 <main>
     <div class="content">
-        MAIN
+        <br><br>
+        <div style="text-align:center;">
+            <b style="color:purple; font-size:30px;">Что такое гумманитарная миссия "Pomosh`"?</b><br><br>
+            <br><br><i>Вы добрый человек и Вам некуда девать доброту, но оооооочень хочется?</i><br><br>
+            <i>Или Вы наоборот нуждаетесь в помощи со стороны?</i><br><br>
+            <i>А может быть Вы профессионал в волонтерстве?</i><br><br>
+            Если хоть что-то совпало, тогда Вы точно по адресу!<br><br><br><br>
+            Мы готовы помогать всем и каждому, кто в этом нуждается. Стоит просто захотеть.
+
+        </div>
+        <br><br><br>
+
+        <i style="margin:200px; text-align:center; font-size:40px;"><a th:href="@{/needies}" class="new"><b>Благоворительность - это модно!</b></a></i>
+
+        <br><br>
+Мы уже помогли:<br><br>
+
+        <div class="menschen"><br>
+            <img class="mensch" src="/img/naf.jpg">
+            <br>
+            <b>Поросенок Наф-Наф</b><br><br>
+            10 лет<br>
+            <div class="innertext">
+                ""Я так рад был получить помощь на этом проекте. Теперь у меня есть красивый и теплый спальный наборчик!""
+
+            </div>
+        </div>
+        <br><br>
+        <div class="menschen">
+            <img class="mensch" src="/img/kuzya.jpg">
+            <br>
+            <b>Домовенок Кузя</b><br><br>
+            10 тысяч млн. лет<br>
+            <div class="innertext">
+                ""Тот, кто оплатил мне счет за воду на год вперед, похоже мой ангел хранитель. Срочно преглашаю всех на чай""
+
+            </div>
+        </div>
+        <br><br>
+        <div class="menschen">
+            <img class="mensch" src="/img/chebur.jpg">
+            <br>
+            <b>Чебурашка</b><br><br>
+            7 лет<br>
+            <div class="innertext">
+                ""Вау!Вау!Вау!  Апельсины... Мои любимые)) Спасибо, добрый Человек!""
+
+            </div>
+        </div>
+        <br><br><br>
+        <a th:href="@{/needies}">
+        <button class="gluck">Кого еще осчастливить?</button>
+        </a>
+
+
     </div>
 </main>
 <footer th:include="~{footer}"/>

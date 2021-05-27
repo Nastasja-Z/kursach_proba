@@ -7,7 +7,7 @@
         }
         div.logo:hover {
             border: 3px white solid;
-            background-color: black;
+            background: black;
 
         }
         div.logo {
@@ -21,10 +21,10 @@
         }
         header {
             grid-area: header;
-            background-color: #e6ffcc;
+            background-color: #e100ff;
+            color:orange;
             height:50px;
-            position:sticky;
-            top:0px;
+
             font-size:20px;
             padding:20px;
 
@@ -39,6 +39,7 @@
 
 
 <header th:fragment="header">
+
     <div class="logo"><a th:href="@{/home}">Pomosh`</a></div>
     <div align="center">
         Гумманитарная миссия "Pomosh`"

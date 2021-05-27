@@ -3,13 +3,51 @@
 
 <html lang="en">
 <head th:include="~{otherTags}"/>
+<style>
+    a.new {
+      background: -webkit-linear-gradient(blue, red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    a.new:hover {
+      background: -webkit-linear-gradient(red, blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    div.content {
+    margin:50px;
+    }
+    div.content {
+        background-color:white;
+    }
+main {
+        background-color:white;
+}
+
+
+</style>
 
 <body class="container">
 <header th:include="~{header}"/>
 <nav th:include="~{menuNav}"/>
 <main>
     <div class="content">
-        MAIN
+        <div>
+            <b>Гумманитарная миссия "Pomosh`"</b> - специализированный проект для помощи нуждающимся. <br><br>
+            Каждый из тех, кого Вы видите в нашем приложении достоен получить помощь. И именно Вы можете <a th:href="@{/needies}" class="new"><b> осчасливить</b> </a> кого-то из наших попеченцев,
+            оплатив для них часть гумманитарного пакета.  <br><br>
+            Абсолютно каждый обладает своей магией, но для этих людей будет легче проявить ее, если кто-то зажжет этот огонь в их глазах. <br><br>
+            Именно с этой целью был создан наш проект гумманитарной миссии <b> "Pomosh`".</b><br><br>
+            <div style="padding: 70px; width:100px;"><img src="/img/help.png"></div>
+            Мы, как начинающие благотворители, призываем каждого из Вас присоединиться к нам и доказать, что:
+            <br><br>
+            <i style="text-align:center; margin:100px;"><a th:href="@{/needies}" class="new"><b>Благоворительность это модно!</b></a></i><br><br>
+
+            Согласны?<br><br>
+            Тогда, предлагаем доказать это всем!<br><br><br><br>
+
+            Заранее балгодарим Вас за помощь!
+        </div>
     </div>
 </main>
 <footer th:include="~{footer}"/>

@@ -29,9 +29,10 @@ public class DonationListService {
     @Transactional
     public void saveListFromBasket(BasketData basketData, User user) {
         DonationList donationList = basketDataTranslator.userBasketDataToOrder(basketData, user);
-        DonationList savedList = donationListRepository.save(donationList);
+        //donationListRepository.save(donationList);
+        // DonationList savedList = donationListRepository.save(donationList);
         //??????????????
-        donationItemService.saveDonationItems(savedList.getDonationItems());
+        //donationItemService.saveDonationItems(donationList.getDonationItems());
 
     }
 

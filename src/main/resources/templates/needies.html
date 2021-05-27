@@ -2,9 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head th:include="~{otherTags}"/>
-
+<style>
+    header {
+    background-color:#e100ff;
+    }
+</style>
 <body class="container">
-<header th:include="~{header}"/>
+<header style="background-color:#e100ff;" th:include="~{header}"/>
 <nav th:include="~{menuNav}"/>
 <main th:include="~{needyTemplate}"/>
 <footer th:include="~{footer}"/>
